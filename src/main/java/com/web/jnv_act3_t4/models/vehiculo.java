@@ -1,10 +1,11 @@
 package com.web.jnv_act3_t4.models;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 import java.math.BigDecimal;
@@ -21,8 +22,9 @@ public class vehiculo {
     private BigDecimal precio;
     private String color;
 
-    @Column(name = "marca_id")
-    private Integer marcaId;
+    @ManyToOne
+    @JoinColumn(name = "marca_id", nullable = false)
+    private Marca marca;
 
     public Integer getId() {
         return id;
@@ -64,11 +66,11 @@ public class vehiculo {
         this.color = color;
     }
 
-    public Integer getMarcaId() {
-        return marcaId;
+    public Marca getMarca() {
+        return marca;
     }
 
-    public void setMarcaId(Integer marcaId) {
-        this.marcaId = marcaId;
+    public void setMarca(Marca marca) {
+        this.marca = marca;
     }
 }
