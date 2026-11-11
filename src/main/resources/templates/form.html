@@ -34,8 +34,15 @@
     </div>
 
     <div class="mb-3">
-        <label for="marcaId" class="form-label">ID de marca</label>
-        <input id="marcaId" type="number" min="1" th:field="*{marcaId}" class="form-control" required>
+        <label for="marcaId" class="form-label">Marca</label>
+        <select id="marcaId" name="marcaId" class="form-select" required>
+            <option value="">Selecciona una marca</option>
+            <option th:each="m : ${marcas}"
+                    th:value="${m.id}"
+                    th:text="${m.nombre}"
+                    th:selected="${vehiculo.marca != null and vehiculo.marca.id == m.id}">
+            </option>
+        </select>
     </div>
 
     <button type="submit" class="btn btn-success">Guardar</button>
