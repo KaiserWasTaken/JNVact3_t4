@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehículos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-4">
+
+<h2>Lista de Vehículos</h2>
+
+<a href="/nuevo" class="btn btn-primary mb-3">Nuevo Vehículo</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Modelo</th>
+            <th>Año</th>
+            <th>Precio</th>
+            <th>Color</th>
+            <th>ID de Marca</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr th:each="v : ${vehiculos}">
+            <td th:text="${v.id}"></td>
+            <td th:text="${v.modelo}"></td>
+            <td th:text="${v.anio}"></td>
+            <td th:text="${v.precio}"></td>
+            <td th:text="${v.color}"></td>
+            <td th:text="${v.marcaId}"></td>
+            <td>
+                <a th:href="@{/editar/{id}(id=${v.id})}" class="btn btn-warning btn-sm">Editar</a>
+                <a th:href="@{/eliminar/{id}(id=${v.id})}" class="btn btn-danger btn-sm">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de Vehículo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-4">
+
+<h2>Formulario de Vehículo</h2>
+
+<form th:action="@{/guardar}" th:object="${vehiculo}" method="post">
+
+    <input type="hidden" th:field="*{id}">
+
+    <div class="mb-3">
+        <label for="modelo" class="form-label">Modelo</label>
+        <input id="modelo" type="text" th:field="*{modelo}" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="anio" class="form-label">Año</label>
+        <input id="anio" type="number" th:field="*{anio}" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="precio" class="form-label">Precio</label>
+        <input id="precio" type="number" step="0.01" min="0" th:field="*{precio}" class="form-control" required>
+    </div>
+
+    <div class="mb-3">
+        <label for="color" class="form-label">Color</label>
+        <input id="color" type="text" th:field="*{color}" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label for="marcaId" class="form-label">ID de marca</label>
+        <input id="marcaId" type="number" min="1" th:field="*{marcaId}" class="form-control" required>
+    </div>
+
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="/" class="btn btn-secondary">Cancelar</a>
+
+</form>
+
+</body>
+</html>
