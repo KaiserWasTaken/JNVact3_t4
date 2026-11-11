@@ -115,41 +115,27 @@ El formulario permite seleccionar una marca y la lista muestra el nombre de la m
 
 ## Capturas de pantalla
 
-### Entidades relacionadas
-
-<!-- Agrega aquí una captura de las entidades Marca y Vehiculo y su relación JPA. -->
-
-![Entidades relacionadas](docs/capturas/01-entidades.png)
-
 ### Crear un vehículo
 
-<!-- Agrega aquí una captura del formulario creando un vehículo. -->
-
-![Crear vehículo](docs/capturas/02-crear-vehiculo.png)
+![Crear vehículo](src/images/CrearVehiculo.png)
 
 ### Listar vehículos
 
-<!-- Agrega aquí una captura de la lista de vehículos mostrando el nombre de la marca. -->
-
-![Listar vehículos](docs/capturas/03-listar-vehiculos.png)
+![Listar vehículos](src/images/ListarVehiculo.png)
 
 ### Editar un vehículo
 
-<!-- Agrega aquí una captura del formulario o resultado de edición. -->
-
-![Editar vehículo](docs/capturas/04-editar-vehiculo.png)
+![Editar vehículo](src/images/EditarVehiculo.png)
 
 ### Eliminar un vehículo
 
-<!-- Agrega aquí una captura antes y después de eliminar un vehículo. -->
+![Vehículo antes de eliminar](src/images/eliminarVehiculo1.png)
 
-![Eliminar vehículo](docs/capturas/05-eliminar-vehiculo.png)
+![Vehículo después de eliminar](src/images/eliminarVehiculo2.png)
 
 ### Persistencia y relación en MySQL
 
-<!-- Agrega aquí una captura de MySQL mostrando la llave foránea marca_id y los datos guardados. -->
-
-![Persistencia en MySQL](docs/capturas/06-persistencia-mysql.png)
+![Persistencia en MySQL](src/images/persistencia.png)
 
 ## Despliegue en VPS
 
